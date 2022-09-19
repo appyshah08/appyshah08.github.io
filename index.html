@@ -29,11 +29,11 @@
         "etName":"Test",
          "etId":"1234"
       }); 
-      clevertap.notificationCallback = function (msg) {
-        clevertap.raiseNotificationViewed();
-        console.log(JSON.stringify(msg));
-        clevertap.raiseNotificationClicked();
-      };
+//       clevertap.notificationCallback = function (msg) {
+//         clevertap.raiseNotificationViewed();
+//         console.log(JSON.stringify(msg));
+//         clevertap.raiseNotificationClicked();
+//       };
     </script>
    </head>
    <body>
@@ -58,19 +58,12 @@
              var btn = document.querySelector('.btn');
              var wrapper = window.parent.document.getElementById('wizParDiv0');
              if(btn && wrapper){
-               btn.addEventListener('click', closePopUp);
+             //  btn.addEventListener('click', closePopUp);
              } 
-             function closePopUp()
-             { wrapper.remove(); }
+//              function closePopUp()
+//              { wrapper.remove(); }
           }
       </script>   
-<!--       <div class="box-btn">CLOSE</div> -->
-      <script>
-         var btn = document.querySelector('.box-btn');
-         var wrapper = window.parent.document.getElementById('wizParDiv0');
-         //btn.addEventListener('click', closePopUp);
-         function closePopUp()
-         { wrapper.remove(); }
-      </script>
+
    </body>
 </html>
