@@ -57,7 +57,9 @@
              debugger;
              var btn = document.querySelector('.btn');
              var wrapper = window.parent.document.getElementById('wizParDiv0');
-             btn.addEventListener('click', closePopUp);
+             if(btn && wrapper){
+               btn.addEventListener('click', closePopUp);
+             } 
              function closePopUp()
              { wrapper.remove(); }
           }
