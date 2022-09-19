@@ -38,5 +38,29 @@
    </head>
    <body>
       <h1>Money is power.Power is everything</h1>
+      <div> <h2>Popup btn click</h2>
+         <button onclick="boxEventClicked()"> Box Clicked</button>
+         <button onclick="bannerEventClicked()"> Banner Clicked </button>
+         <button onclick="interstiEventClicked()"> Interstitial Clicked </button>
+      </div>   
+      <script>
+          function boxEventClicked(){
+             clevertap.event.push("Box Clicked");
+          }
+          function bannerEventClicked(){
+             clevertap.event.push("Banner Clicked"); 
+          }
+          function interstiEventClicked(){
+             clevertap.event.push("Interstitial Clicked");
+          }
+      </script>   
+      <div class="box-btn">CLOSE</div>
+      <script>
+         var btn = document.querySelector('.box-btn');
+         var wrapper = window.parent.document.getElementById('wizParDiv0');
+         btn.addEventListener('click', closePopUp);
+         function closePopUp()
+         { wrapper.remove(); }
+      </script>
    </body>
 </html>
