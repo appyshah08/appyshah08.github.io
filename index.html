@@ -53,6 +53,13 @@
           function interstiEventClicked(){
              clevertap.event.push("Interstitial Clicked");
           }
+         function boxNotificationClicked(){
+             var btn = document.querySelector('.btn');
+             var wrapper = window.parent.document.getElementById('wizParDiv0');
+             btn.addEventListener('click', closePopUp);
+             function closePopUp()
+             { wrapper.remove(); }
+          }
       </script>   
 <!--       <div class="box-btn">CLOSE</div> -->
       <script>
