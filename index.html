@@ -53,16 +53,21 @@
           }
          function boxNotificationClicked(){
              alert("CLicked");
-             var btn = document.querySelector('.btn');
              var wrapper = window.parent.document.getElementById('wizParDiv0');
              wrapper.remove();
          }
 	 function exitBannerButtonClicked(){
 	     alert("CLicked");
-             var btn = document.querySelector('.btn');
              var wrapper = window.parent.document.getElementById('wizParDiv2');
              wrapper.remove(); 
-	 }		 
+	 }
+	 function exitInterButtonClicked(){
+	     alert("CLicked");
+             var overlay = window.parent.document.getElementById('intentOpacityDiv');
+             var wrapper = window.parent.document.getElementById('intentPreview');
+             wrapper.remove(); 
+             overlay.remove();		 
+	 }      
 //              debugger;
 //              var btn = document.querySelector('.btn');
 //              var wrapper = window.parent.document.getElementById('wizParDiv0');
