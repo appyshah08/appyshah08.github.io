@@ -23,10 +23,10 @@
 		 s.parentNode.insertBefore(wzrk, s);
       })();
           
-      clevertap.event.push("Viewed product",{
-        "etName":"Test",
-         "etId":"1234"
-      }); 
+//       clevertap.event.push("Viewed product",{
+//         "etName":"Test",
+//          "etId":"1234"
+//       }); 
 //       clevertap.notificationCallback = function (msg) {
 //         clevertap.raiseNotificationViewed();
 //         console.log(JSON.stringify(msg));
@@ -37,6 +37,16 @@
    <body>
       <h1>Money is power.Power is everything</h1>
       <div> <h2>Popup btn click</h2>
+	   <div>   
+	       <input type="text" class="txtIdentity" />
+	   </div>		   
+	  <div>	   
+	       <input type="text" class="txtEmail" />
+	  </div>		  
+          <div>		  
+	      <input type="text" class="txtMobile" />  
+	 </div>		  
+		  
 	  <button onclick="onuserLoginClicked()">Onuserlogin</button>
 	  <button onclick="profilePushClicked()">Profile Push</button>
          <button onclick="boxEventClicked()"> Box Clicked</button>
