@@ -49,6 +49,7 @@
 	 </div>		  
 		  
 	  <button onclick="onuserLoginClicked()">Onuserlogin</button>
+	 <button onclick="webLoginClicked()">Web Login Success</button>     
 	  <button onclick="profilePushClicked()">Profile Push</button>
          <button onclick="boxEventClicked()"> Box Clicked</button>
          <button onclick="bannerEventClicked()"> Banner Clicked </button>
@@ -65,6 +66,10 @@
              clevertap.event.push("Interstitial Clicked");
              
           }
+	 function webLoginClicked(){
+             clevertap.event.push("Web Login Successful");
+             
+          }     
 	 function onuserLoginClicked(){
 		 
 		
