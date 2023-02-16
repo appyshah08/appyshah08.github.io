@@ -56,6 +56,7 @@
          <button onclick="interstiEventClicked()"> Interstitial Clicked </button>
       </div>   
       <script>
+	      
           function boxEventClicked(){
              clevertap.event.push("Box Clicked");
           }
@@ -137,6 +138,30 @@
 // //              { wrapper.remove(); }
 //           }
       </script>   
+      <script type="module">
+  	 // Import the functions you need from the SDKs you need
+  	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+  	import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+  	// TODO: Add SDKs for Firebase products that you want to use
+  	// https://firebase.google.com/docs/web/setup#available-libraries
+
+  	// Your web app's Firebase configuration
+  	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  	const firebaseConfig = {
+    		apiKey: "AIzaSyDYJS8RGDhykzrayLVPlaWB_sl5O5yJ-WA",
+    		authDomain: "ctwebsdk-9d9d8.firebaseapp.com",
+    		projectId: "ctwebsdk-9d9d8",
+    		storageBucket: "ctwebsdk-9d9d8.appspot.com",
+    		messagingSenderId: "512108197835",
+    		appId: "1:512108197835:web:8156d40a11b66b97f8e84e",
+    		measurementId: "G-S35N9T3LNW"
+        };
+
+  	// Initialize Firebase
+  	const app = initializeApp(firebaseConfig);
+  	const analytics = getAnalytics(app);
+    </script>	   
+	   
 
    </body>
 </html>
