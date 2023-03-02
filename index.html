@@ -56,6 +56,7 @@
          <button onclick="boxEventClicked()"> Box Clicked</button>
          <button onclick="bannerEventClicked()"> Banner Clicked </button>
          <button onclick="interstiEventClicked()"> Interstitial Clicked </button>
+	 <button onclick="kalkiClicked()"> Kalki Clicked </button>     
       </div>   
       <script>
 	      
@@ -127,6 +128,19 @@
              var wrapper = window.parent.document.getElementById('wizParDiv0');
              wrapper.remove();
          }
+	 function kalkiClicked(){
+	     alert("clicked");	 
+             clevertap.event.push("kalki_push");		 
+	     var wrapper = window.parent.document.getElementById('wizParDiv0');
+             var btnDone = window.parent.document.getElementById('wzrk_done');	
+             var btnClose = window.parent.document.getElementById('wzrk_close');
+             btnDone.addEventListener('click', closePopUp);
+	     btnClose.addEventListener('click', closePopUp);
+              function closePopUp()
+              { 
+		      wrapper.remove(); 
+	      }		 
+	 }		 
 	 function exitBannerButtonClicked(){
 	     alert("CLicked");
              var wrapper = window.parent.document.getElementById('wizParDiv2');
