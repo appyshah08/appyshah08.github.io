@@ -132,8 +132,8 @@
 	     alert("clicked");	 
              clevertap.event.push("kalki_push");		 
 	     var wrapper = window.parent.document.getElementById('wizParDiv0');
-             var btnDone = window.parent.document.getElementById('wzrk_done');	
-             var btnClose = window.parent.document.getElementById('wzrk_close');
+             var btnDone = window.parent.document.getElementsByClassName('wzrk_done');	
+             var btnClose = window.parent.document.getElementsByClassName('wzrk_close');
              btnDone.addEventListener('click', closePopUp);
 	     btnClose.addEventListener('click', closePopUp);
               function closePopUp()
