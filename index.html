@@ -88,8 +88,10 @@
          <button onclick="interstiEventClicked()"> Interstitial Clicked </button>
 	 <button onclick="kalkiClicked()"> Kalki Clicked </button>   
 	 <button onclick="webinboxcode()" id="inbox"> Web Inbox </button> <br/>
-	 <button onclick="webnativeSingleClicked()"> Web Native SB </button>   
-	 <button onclick="webnativeCarouselClicked()"> Web Native CB </button>   
+	 <button onclick="webnativeSingleClicked('single')"> Web Native SB </button> 
+	 <button onclick="webnativeSingleClicked('singletext')"> Web Native SBT</button>      
+	 <button onclick="webnativeCarouselClicked('carousel')"> Web Native CB </button>  
+	  <button onclick="webnativeCarouselClicked('carouseltext')"> Web Native CBT </button>       
 	 <button onclick="webnativeCustomClicked()"> Web Native Custom </button>   
       </div>   
       <script>
@@ -201,18 +203,18 @@
              wrapper.remove(); 
              overlay.remove();		 
 	 }    
-	 function webnativeSingleClicked()
+	 function webnativeSingleClicked(key)
          {
             alert("Clicked");
-            clevertap.event.push("WebNativeS");		 
+            clevertap.event.push("WebNativeS",{type:key});		 
 	 }
 	 function webnativeCustomClicked()
 	 {    
 	 }
-	 function webnativeCarouselClicked()
+	 function webnativeCarouselClicked(key)
          {
             alert("Clicked");
-	    clevertap.event.push("WebNativeC");	 
+	    clevertap.event.push("WebNativeC",{type:key});	 
 	 }		  
 //              debugger;
 //              var btn = document.querySelector('.btn');
