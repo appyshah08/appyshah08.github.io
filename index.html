@@ -76,7 +76,10 @@
           <div>		  
 	      <input type="text" id="txtMobile" placeholder="Mobile" style="margin:10px"/>  
 	 </div>		  
-		  
+         <div id="containerSingle">
+	 </div>
+	 <div id="containerCarousel">
+	  </div>     
 	  <button onclick="onuserLoginClicked()">Onuserlogin</button>
 	 <button onclick="webLoginClicked()">Web Login Success</button>     
 	  <button onclick="profilePushClicked()">Profile Push</button>
@@ -200,13 +203,16 @@
 	 }    
 	 function webnativeSingleClicked()
          {
-
+            alert("Clicked");
+            clevertap.event.push("WebNativeS");		 
 	 }
 	 function webnativeCustomClicked()
 	 {    
 	 }
 	 function webnativeCarouselClicked()
          {
+            alert("Clicked");
+	    clevertap.event.push("WebNativeC");	 
 	 }		  
 //              debugger;
 //              var btn = document.querySelector('.btn');
