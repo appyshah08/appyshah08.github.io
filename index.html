@@ -79,7 +79,18 @@
          <div id="containerSingle">
 	 </div>
 	 <div id="containerCarousel">
-	  </div>     
+	  </div>    
+	 <div id="container">
+	     <div class="close">&times;</div>
+  	        <img src="https://img.freepik.com/free-photo/young-gowoman-yellow-leather-jacket-copy-space_23-2148674153.jpg?w=2000"/>
+             <div class="message">
+  	         Hello <span id="user-name">user</span>,
+   	         <p>Still thinking about the <span id="product-name">item</span> in your cart?</p>
+                 <p>We get it - it's fabulous.</p>
+   	         <p>Use SALE20 and avail 20% off</p>
+                 <p>What are you waiting for??</p>
+             </div>
+           </div>     
 	  <button onclick="onuserLoginClicked()">Onuserlogin</button>
 	 <button onclick="webLoginClicked()">Web Login Success</button>     
 	  <button onclick="profilePushClicked()">Profile Push</button>
@@ -120,7 +131,10 @@
 	 function webLoginClicked(){
              clevertap.event.push("Web Login Successful");
              
-          }     
+          }   
+	 function webnativeCustomClicked(){
+             clevertap.event.push("Web Native Custom");
+	 }		 
 	 function onuserLoginClicked(){
 		 
 		
@@ -168,6 +182,21 @@
              var wrapper = window.parent.document.getElementById('wizParDiv0');
              wrapper.remove();
          }
+	      
+	 function renderCartDropOffPersonalisationCampaign(data) {
+	     const name = data.kv.Name;
+  	     const product = data.kv.Cart;
+  	     const containerEl = document.getElementById('container')
+             const userNameEl = containerEl.getElementById('user-name')
+             usernameEl.innerText = name
+             const productNameEl = containerEl.getElementById('product-name')
+             productNameEl.innerText = product 
+             clevertap.renderNotificationViewed(data);
+             containerEl.addEventListener('click', () => {
+  		 clevertap.renderNotificationClicked(data)
+	     });		 
+         }
+	      
 	 function kalkiClicked(){
 	     //alert("clicked");	 
              clevertap.event.push("kalki_push");		 
