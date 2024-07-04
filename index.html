@@ -57,7 +57,42 @@
 	color: white !important; 
       } 	    	     */
 	    
-	    
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .ticker-container {
+            width: 100%;
+            height: 35px;
+            background: #222;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+        }
+        .ticker {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 2rem;
+            color: #fff;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>	    
 	    
 	    
     </style>	   
@@ -105,6 +140,15 @@
 	  <button onclick="webnativeCarouselClicked('carouseltext')"> Web Native CBT </button>       
 	 <button onclick="webnativeCustomClicked()"> Web Native Custom </button>   
       </div>   
+      <div id="ticker-container">
+	<div class="ticker">
+<!--             <div class="ticker-item">AAPL: $150.00 +1.50%</div>
+            <div class="ticker-item">GOOGL: $2750.00 +2.00%</div>
+            <div class="ticker-item">AMZN: $3500.00 +0.75%</div>
+            <div class="ticker-item">MSFT: $280.00 +1.25%</div>
+            <div class="ticker-item">TSLA: $650.00 -0.50%</div> -->
+        </div>  
+      </div>	   
       <script>
 	  function webinboxcode(){
              console.log("thank you");
@@ -197,7 +241,10 @@
   		 clevertap.renderNotificationClicked(data)
 	     });		 
          }
-	      
+	 document.addEventListener("CT_web_native_display", function(event) {
+            debugger; 
+	    console.log(event);
+        });     
 	 function kalkiClicked(){
 	     //alert("clicked");	 
              clevertap.event.push("kalki_push");		 
