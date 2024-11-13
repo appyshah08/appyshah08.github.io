@@ -148,7 +148,11 @@
              
           }
 	 function webLoginClicked(){
-             clevertap.event.push("Web Login Successful");
+		if(window.CleverTap){
+		  window.CleverTap.event.pushEvent("Cat-34");
+		}else{	
+               clevertap.event.push("Web Login Successful");
+		}
              
           }   
 	 function webnativeCustomClicked(){ 
