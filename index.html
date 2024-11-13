@@ -163,6 +163,9 @@
 		 var email = document.getElementById("txtEmail").value;
 		 var mobile = document.getElementById("txtMobile").value;
 		 alert("onuserlogin");
+		 if(window.CleverTap){
+                      CleverTap.pushEvent("Cat-34");
+		 }else{		 
 	    	 clevertap.onUserLogin.push({
                      "Site": {
                        //"Name": "Jack Montana",                  // String
@@ -175,6 +178,7 @@
 
                  // Enable whatsapp notifications
                  }
+		 }	 
 	      });
 	 }	
 	function profilePushClicked(){
