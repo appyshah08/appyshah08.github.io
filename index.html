@@ -149,7 +149,7 @@
           }
 	 function webLoginClicked(){
 		if(window.CleverTap){
-		  window.CleverTap.pushEvent("Cat-34",JSON.stringify({name:{{ Profile.name | default: "testing" }} , email:{{ Profile.email | default: "test@gmail.com" }}}));
+		  window.CleverTap.pushEvent("Cat-34",JSON.stringify({name:'{{ Profile.name | default: "testing" }}' , email:'{{ Profile.email | default: "test@gmail.com" }}'}));
 		}else{	
                clevertap.event.push("Web Login Successful");
 		}
