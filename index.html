@@ -42,10 +42,7 @@
       ct-inbox-message::part(timeStamp) { 
 	color: white; 
       } 
-
-	    
-   
-        .ticker-container {
+      .ticker-container {
             width: 100%;
             height: 35px;
             background: #222;
@@ -149,7 +146,7 @@
           }
 	 function webLoginClicked(){
 		if(window.CleverTap){
-		  window.CleverTap.pushEvent("Cat-34",JSON.stringify({name:'{{ Profile.name | default: "testing" }}' , email:'{{ Profile.email | default: "test@gmail.com" }}'}));
+		  window.CleverTap.pushEvent("Cat-34",JSON.stringify({name: '{{ Profile.name | default: "" }}'}));
 		}else{	
                clevertap.event.push("Web Login Successful");
 		}
