@@ -12,7 +12,7 @@
         privacy: [],
       };
       // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
-      clevertap.account.push({ id: "464-878-R96Z" });
+      clevertap.account.push({ id: "4W5-9RR-646Z" });
       clevertap.privacy.push({ optOut: false }); //set the flag to true, if the user of the device opts out of sharing their data
       clevertap.privacy.push({ useIP: false }); //set the flag to true, if the user agrees to share their IP data
       (function () {
@@ -110,7 +110,8 @@
 	 <button onclick="webnativeSingleClicked('singletext')"> Web Native SBT</button>      
 	 <button onclick="webnativeCarouselClicked('carousel')"> Web Native CB </button>  
 	  <button onclick="webnativeCarouselClicked('carouseltext')"> Web Native CBT </button>       
-	 <button onclick="webnativeCustomClicked()"> Web Native Custom </button>   
+	 <button onclick="webnativeCustomClicked()"> Web Native Custom </button>
+	  <button onclick="productExpClicked()"> Product Experience </button>       
       </div>   
       <div class="ticker-container" id="ticker-container">
 	<div class="ticker" id="ticker">
@@ -137,6 +138,10 @@
 	         "serviceWorkerPath":"/clevertap_serviceworker.js"
 	     });		  
           }
+	   function productExpClicked(){
+            // clevertap.event.push("Box Clicked");
+             window.location.href= './pe.html'  ;		  
+          }    
           function bannerEventClicked(){
              clevertap.event.push("Banner Clicked"); 
           }
