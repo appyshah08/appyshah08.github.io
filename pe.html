@@ -40,7 +40,7 @@
     </script>	    
 	
 </head>
-<body>
+	<body>
     <!-- Top Menu Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -81,55 +81,40 @@
 
     <div class="container">
         <!-- First Carousel -->
-        <div class="carousel-container">
-            <div class="carousel-title">Category</div>
-            <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row text-center">
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
+   
 
-        <div class="carousel-container">
-            <div class="carousel-title">Best Picks For You</div>
-            <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row text-center">
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                        </div>
-                    </div>
+      
+            <!-- Scrollable Carousel -->
+            <div class="carousel-container">
+                <div class="carousel-title">Category</div>
+                <button class="carousel-btn carousel-btn-left" onclick="scrollCarousel(-1)">&#10094;</button>
+                <div class="carousel-scroll" id="carousel">
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 1</p><p>$10.00</p></div></div>
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 2</p><p>$12.00</p></div></div>
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 3</p><p>$15.00</p></div></div>
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 4</p><p>$18.00</p></div></div>
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 5</p><p>$20.00</p></div></div>
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 6</p><p>$25.00</p></div></div>
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 7</p><p>$30.00</p></div></div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <button class="carousel-btn carousel-btn-right" onclick="scrollCarousel(1)">&#10095;</button>
             </div>
-        </div>
+        
+
+            <div class="carousel-container">
+                <div class="carousel-title">Best Picks For You</div>
+                <button class="carousel-btn carousel-btn-left" onclick="scrollCarousel(-1,'carousel1')">&#10094;</button>
+                <div class="carousel-scroll" id="carousel1">
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 1</p><p>$10.00</p></div></div>
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 2</p><p>$12.00</p></div></div>
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 3</p><p>$15.00</p></div></div>
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 4</p><p>$18.00</p></div></div>
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 5</p><p>$20.00</p></div></div>
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 6</p><p>$25.00</p></div></div>
+                    <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 7</p><p>$30.00</p></div></div>
+                </div>
+                <button class="carousel-btn carousel-btn-right" onclick="scrollCarousel(1,'carousel1')">&#10095;</button>
+            </div>
 
         <div class="carousel-title">Best Offers</div>
         <div id="topSlider" class="carousel slide" data-bs-ride="carousel">
@@ -153,28 +138,18 @@
         </div>
 
         <div class="carousel-container">
-            <div class="carousel-title">Last Visited </div>
-            <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row text-center">
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                            <div class="col-md-2"><div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button> -->
+            <div class="carousel-title">Last Visited</div>
+            <button class="carousel-btn carousel-btn-left" onclick="scrollCarousel(-1,'carousel2')">&#10094;</button>
+            <div class="carousel-scroll" id="carousel2">
+                <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 1</p><p>$10.00</p></div></div>
+                <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 2</p><p>$12.00</p></div></div>
+                <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 3</p><p>$15.00</p></div></div>
+                <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 4</p><p>$18.00</p></div></div>
+                <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 5</p><p>$20.00</p></div></div>
+                <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 6</p><p>$25.00</p></div></div>
+                <div class="card"><img src="https://picsum.photos/200/300" class="card-img-top"><div class="card-body"><p>Item 7</p><p>$30.00</p></div></div>
             </div>
+            <button class="carousel-btn carousel-btn-right" onclick="scrollCarousel(1,'carousel2')">&#10095;</button>
         </div>
 
     </div>
@@ -186,5 +161,12 @@
 
     <!-- Bootstrap Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function scrollCarousel(direction,idname) {
+            const carousel = document.getElementById(idname);
+            const scrollAmount = 320; // Adjusted based on card width
+            carousel.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+        }
+    </script>
 </body>
 </html>
