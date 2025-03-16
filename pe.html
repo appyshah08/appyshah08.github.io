@@ -45,6 +45,7 @@
       })();
       // const var1 = clevertap.defineVariable("Feature Hide", false)  
 	setInterval(function(){
+            clevertap.setLogLevel(4);		
             clevertap.syncVariables(  
 		  // Success callback function  
  		 () => { console.log('Sync successful'); },
