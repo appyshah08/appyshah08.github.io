@@ -172,6 +172,19 @@
             const scrollAmount = 320; // Adjusted based on card width
             carousel.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
         }
+
+        const var1 = clevertap.defineVariable("Feature Hide", false)  
+	clevertap.syncVariables(  
+		  // Success callback function  
+ 		 () => { console.log('Sync successful'); },
+		 // Failure callback function  
+  		() => { console.log('Sync failed'); }  
+	);    
+	clevertap.fetchVariables(  
+  		// Success callback function  
+  		() => { console.log('Fetch successful'); },  
+	); 
+	    
     </script>
 </body>
 </html>
