@@ -43,9 +43,10 @@
 		 var s = document.getElementsByTagName('script')[0];
 		 s.parentNode.insertBefore(wzrk, s);
       })();
-      // const var1 = clevertap.defineVariable("Feature Hide", false)  
+        
 	setInterval(function(){
-            clevertap.setLogLevel(4);		
+            clevertap.setLogLevel(4);	
+	    const var1 = clevertap.defineVariable("Feat Hide", false) 	
             clevertap.syncVariables(  
 		  // Success callback function  
  		 () => { console.log('Sync successful'); },
