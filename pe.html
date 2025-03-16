@@ -44,16 +44,19 @@
 		 s.parentNode.insertBefore(wzrk, s);
       })();
       // const var1 = clevertap.defineVariable("Feature Hide", false)  
-	clevertap.syncVariables(  
+	setInterval(function(){
+            clevertap.syncVariables(  
 		  // Success callback function  
  		 () => { console.log('Sync successful'); },
 		 // Failure callback function  
   		() => { console.log('Sync failed'); }  
-	);    
-	clevertap.fetchVariables(  
+	   );    
+	   clevertap.fetchVariables(  
   		// Success callback function  
   		() => { console.log('Fetch successful'); },  
-	); 	    
+	   ); 
+        }, 5000);    
+		    
     </script>	    
 	
 </head>
