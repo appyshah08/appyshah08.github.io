@@ -31,6 +31,8 @@
         privacy: [],
 	token: "TEST-22c-504"      
       };
+      var syncFlag = false; 
+      var fetchFlag = false; 	    
       // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
       clevertap.account.push({ id: "TEST-4W5-9RR-646Z" });
       clevertap.privacy.push({ optOut: false }); //set the flag to true, if the user of the device opts out of sharing their data
@@ -43,20 +45,33 @@
 		 var s = document.getElementsByTagName('script')[0];
 		 s.parentNode.insertBefore(wzrk, s);
       })();
-        
-	setInterval(function(){
+        var myInterval;
+	myInterval = setInterval(function(){
             clevertap.setLogLevel(4);	
-	    const var1 = clevertap.defineVariable("Feat Hide", false) 	
+	    feat_hide = clevertap.defineVariable("Feat Hide", false);
+            force_update = clevertap.defineVariable("Force Update",false); 
+            theme = clevertap.defineVariable("theme","");
+	    img_url = clevertap.defineVariable("img_url","");	
             clevertap.syncVariables(  
 		  // Success callback function  
- 		 () => { console.log('Sync successful'); },
+ 		 () => { 
+			 console.log('Sync successful');
+		         syncFlag = true; 
+		      },
 		 // Failure callback function  
-  		() => { console.log('Sync failed'); }  
+  		() => { 
+			console.log('Sync failed'); 
+		        syncFlag = false;  
+		     }  
 	   );    
 	   clevertap.fetchVariables(  
   		// Success callback function  
-  		() => { console.log('Fetch successful'); },  
+  		() => { 
+			console.log('Fetch successful');
+		        fetchFlag = true;  
+		     },  
 	   ); 
+           clearInterval(myInterval);		
         }, 5000);    
 		    
     </script>	    
