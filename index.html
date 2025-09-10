@@ -116,6 +116,7 @@
 	    <button id="webinbox" class="webinbox">Inbox1</button>
       </div>   
       <div class="ticker-container" id="ticker-container">
+		    <div class="btn">CLOSE</div>
 	<div class="ticker" id="ticker">
 <!--             <div class="ticker-item">AAPL: $150.00 +1.50%</div>
             <div class="ticker-item">GOOGL: $2750.00 +2.00%</div>
@@ -125,6 +126,17 @@
         </div>  
       </div>	   
       <script>
+		
+<script>
+var btn = document.querySelector('.btn');
+var wrapper = window.parent.document.getElementById('wizParDiv2');
+btn.addEventListener('click', closePopUp);
+function closePopUp() { 
+  setTimeout(() => {
+    wrapper.remove();
+  }, 0);
+}
+</script>
 	  function webinboxcode(){
              console.log("thank you");
 	  }		  
