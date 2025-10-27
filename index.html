@@ -112,7 +112,8 @@
 	  <button onclick="webnativeCarouselClicked('carouseltext')"> Web Native CBT </button>       
 	 <button onclick="webnativeCustomClicked()"> Web Native Custom </button>
 	  <button onclick="productExpClicked()"> Product Experience </button>   
-	  <button onclick="webInboxClicked()">Web Inbox Show </button>    
+	  <button onclick="webInboxClicked()">Web Inbox Show </button>
+      <button onclick="webNativeDisplay()">Web Native Display </button>   		  
 	    <button id="webinbox" class="webinbox">Inbox1</button>
       </div>   
       <div class="ticker-container" id="ticker-container">
@@ -156,6 +157,9 @@ function closePopUp() {
             // clevertap.event.push("Box Clicked");
              window.location.href= './pe.html'  ;		  
           }    
+	   function webNativeDisplay(){
+            window.location.href="./webnative.html";
+	   }  
           function bannerEventClicked(){
              clevertap.event.push("Banner Clicked"); 
           }
