@@ -98,23 +98,13 @@
                  <p>What are you waiting for??</p>
              </div>
            </div>      -->
-	  <button onclick="onuserLoginClicked()">Onuserlogin</button>
-	 <button onclick="webLoginClicked()">Web Login Success</button>     
-	  <button onclick="profilePushClicked()">Profile Push</button>
-         <button onclick="boxEventClicked()"> Box Clicked</button>
-         <button onclick="bannerEventClicked()"> Banner Clicked </button>
-         <button onclick="interstiEventClicked()"> Interstitial Clicked </button>
-	 <button onclick="kalkiClicked()"> Kalki Clicked </button>   
-	 <button onclick="webinboxcode()" id="inbox"> Web Inbox </button> <br/>
+	  
 	 <button onclick="webnativeSingleClicked('single')"> Web Native SB </button> 
 	 <button onclick="webnativeSingleClicked('singletext')"> Web Native SBT</button>      
 	 <button onclick="webnativeCarouselClicked('carousel')"> Web Native CB </button>  
 	  <button onclick="webnativeCarouselClicked('carouseltext')"> Web Native CBT </button>       
 	 <button onclick="webnativeCustomClicked()"> Web Native Custom </button>
-	  <button onclick="productExpClicked()"> Product Experience </button>   
-	  <button onclick="webInboxClicked()">Web Inbox Show </button>
-      <button onclick="webNativeDisplay()">Web Native Display </button>   		  
-	    <button id="webinbox" class="webinbox">Inbox1</button>
+	
       </div>   
       <div class="ticker-container" id="ticker-container">
 		    <div class="btn">CLOSE</div>
@@ -138,25 +128,8 @@ function closePopUp() {
   }, 0);
 }
 
-	  function webinboxcode(){
-             console.log("thank you");
-	  }		  
-          function boxEventClicked(){
-            // clevertap.event.push("Box Clicked");
-             clevertap.notifications.push({
- 
- 		 "titleText":'Would you like to receive Push Notifications?',
- 		 "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
-  		 "okButtonText":'Sign me up!',
-  		 "rejectButtonText":'No thanks',
-  		 "okButtonColor":'#f28046',
-	         "serviceWorkerPath":"/clevertap_serviceworker.js"
-	     });		  
-          }
-	   function productExpClicked(){
-            // clevertap.event.push("Box Clicked");
-             window.location.href= './pe.html'  ;		  
-          }    
+	
+	      
 	   function webNativeDisplay(){
             window.location.href="./webnative.html";
 	   }  
@@ -180,54 +153,9 @@ function closePopUp() {
 	     alert("Clicked");	 
              clevertap.event.push("Web Native Custom");
 	 }		 
-	 function onuserLoginClicked(){
-		 
-		
-		 var identity = document.getElementById("txtIdentity").value;
-		// console.log("identity:"+identity);
-		 var email = document.getElementById("txtEmail").value;
-		 var mobile = document.getElementById("txtMobile").value;
-		 alert("onuserlogin");
-		 if(window.CleverTap){
-                      CleverTap.pushEvent("Cat-34");
-		 }else{		 
-	    	 clevertap.onUserLogin.push({
-                     "Site": {
-                       //"Name": "Jack Montana",                  // String
-                       "Identity": document.getElementById("txtIdentity").value,                    // String or number
-                       "Email": document.getElementById("txtEmail").value,               // Email address of the user
-                       "Phone": document.getElementById("txtMobile").value,                 // Phone (with the country code)
-                       //"Gender": "M",                           // Can be either M or F
-                       //"DOB": new Date(), // Date of Birth. Javascript Date object
- //                       "Photo": 'www.foobar.com/image.jpeg',    // URL to the Image
-
-                 // Enable whatsapp notifications
-                 
-		 }	 
-	      });
-		 }			 
-	 }	
-	function profilePushClicked(){
-		
-		 var identity = document.getElementById("txtIdentity").value;
-		 var email = document.getElementById("txtEmail").value;
-		 var mobile = document.getElementById("txtMobile").value;
-		alert("profilepush");
-                clevertap.profile.push({
-                    "Site": {
-                       "Name": "Jack Montana",                  // String
-                       "Identity": document.getElementById("txtIdentity").value,                    // String or number
-                       "Email": document.getElementById("txtEmail").value,               // Email address of the user
-                       "Phone": document.getElementById("txtMobile").value,                 // Phone (with the country code)
-                       "Gender": "M",                           // Can be either M or F
-                       "DOB": new Date(), // Date of Birth. Javascript Date object
-                       "Photo": 'www.foobar.com/image.jpeg',    // URL to the Image
-
-                 // Enable whatsapp notifications
-                 }
-	      });
-	 }	      
-         function boxNotificationClicked(){
+	
+		      
+     function boxNotificationClicked(){
              alert("CLicked");
              var wrapper = window.parent.document.getElementById('wizParDiv0');
              wrapper.remove();
