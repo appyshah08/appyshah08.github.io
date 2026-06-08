@@ -164,7 +164,11 @@ function closePopUp() {
              clevertap.event.push("Banner Clicked"); 
           }
           function interstiEventClicked(){
+			 if(window.CTWebview){
+                window.CTWebview.pushEvent("Interstitial Clicked"); 
+			 }else{		 
              clevertap.event.push("Interstitial Clicked");
+			 }	  
              
           }
 	 function webLoginClicked(){
