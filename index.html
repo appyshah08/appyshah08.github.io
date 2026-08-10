@@ -161,7 +161,15 @@ function closePopUp() {
             window.location.href="./webnative.html";
 	   }  
           function bannerEventClicked(){
-             clevertap.event.push("Banner Clicked"); 
+             // clevertap.event.push("Banner Clicked"); 
+			 var props = {package: 'AU0101'};
+			  alert("inside");
+             var message = { action:'recordEventWithProps', event:'AppsFlyer Deep Link', properties: props};
+             if(window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.au0101_mf_ios){
+               // Call iOS interface       
+			   alert('handlers: ' + JSON.stringify(Object.keys(window.webkit.messageHandlers || {})));	 
+               window.webkit.messageHandlers.au0101_mf_ios.postMessage(message);         
+             } 
           }
           function interstiEventClicked(){
 			 if(window.CTWebview){
