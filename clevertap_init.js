@@ -1,6 +1,6 @@
 // ====== CONFIG: replace with your CleverTap project details ======
-var CT_ACCOUNT_ID = "YOUR_ACCOUNT_ID"; // CleverTap Dashboard > Settings > Project
-var CT_REGION = "in1";                 // in1 (India), eu1, us1, sg1, aps3, mec1 ... or "" for default
+var CT_ACCOUNT_ID = "W6K-9ZK-RW7Z"; // CleverTap Dashboard > Settings > Project
+var CT_REGION = "eu1";                 // in1 (India), eu1, us1, sg1, aps3, mec1 ... or "" for default
 // =================================================================
 
 var clevertap = { event: [], profile: [], account: [], onUserLogin: [], notifications: [], privacy: [] };
